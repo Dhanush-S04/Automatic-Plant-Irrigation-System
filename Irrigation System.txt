@@ -1,0 +1,20 @@
+Constants:
+    DRY_THRESHOLD = 700
+    PUMP_DURATION = 5000 (milliseconds)
+    READING_INTERVAL = 60000 (milliseconds)
+
+Pins:
+    Moisture Sensor Pin = A0
+    Pump Pin = 2
+
+Setup:
+    Initialize Moisture Sensor Pin as INPUT
+    Initialize Pump Pin as OUTPUT
+
+Main Loop:
+    Read moisture level from Moisture Sensor Pin
+    If moisture level is greater than DRY_THRESHOLD:
+        Activate Pump Pin
+        Wait for PUMP_DURATION
+        Deactivate Pump Pin
+    Wait for READING_INTERVAL
